@@ -24,15 +24,23 @@ A Discord music bot that can play audio from YouTube with queue management and v
 1. Clone this repository
 2. Install required dependencies:
    ```bash
-   pip install discord.py yt-dlp python-dotenv youtubesearchpython
+   # Full installation with optional packages
+   pip install -r requirements.txt
+   
+   # Or minimal installation with essential packages only
+   pip install -r requirements-minimal.txt
    ```
-3. Create a `.env` file with your Discord bot token:
+3. Install FFmpeg (required for audio processing):
+   - **Windows**: Download from [FFmpeg website](https://ffmpeg.org/download.html) or use `winget install FFmpeg`
+   - **macOS**: `brew install ffmpeg`
+   - **Linux**: `sudo apt install ffmpeg` (Ubuntu/Debian) or equivalent for your distro
+4. Create a `.env` file with your Discord bot token:
    ```
    DISCORD_TOKEN=your_bot_token_here
    ```
-4. Run the bot:
+5. Run the bot:
    ```bash
-   python main.py
+   python music_bot/main.py
    ```
 
 ## Requirements
